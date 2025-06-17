@@ -9,7 +9,7 @@ class Restaurant(db.Model):
 
     restaurant_pizzas = db.relationship(
         'RestaurantPizza',
-        back_populates='restaurant',
+        backref='restaurant',
         cascade='all, delete-orphan'
     )
 
